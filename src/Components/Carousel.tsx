@@ -6,6 +6,7 @@ import {
   isValidElement,
   ReactElement,
   ReactNode,
+  useCallback,
   useEffect,
   useState,
 } from "react";
@@ -51,11 +52,7 @@ export const Carousel: FC<CarouselProps> = ({
     if (onChangeItem) {
       onChangeItem(currentIndex);
     }
-  }, [currentIndex]);
-
-  const goToNextCycle = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalChildren);
-  };
+  }, [currentIndex, onChangeItem]);
 
   const goToPreviousCycle = () => {
     setCurrentIndex((prevIndex) =>
@@ -63,11 +60,15 @@ export const Carousel: FC<CarouselProps> = ({
     );
   };
 
-  const goToNext = () => {
+  const goToNextCycle = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalChildren);
+  }, [totalChildren]);
+
+  const goToNext = useCallback(() => {
     setCurrentIndex((previndex) =>
       previndex < totalChildren - 1 ? previndex + 1 : previndex
     );
-  };
+  }, [totalChildren]);
 
   const goToPrevious = () => {
     if (currentIndex > 0 || currentIndex == totalChildren) {
@@ -88,7 +89,7 @@ export const Carousel: FC<CarouselProps> = ({
     }
 
     return () => clearInterval(interval);
-  }, [autoplay, time, cycleNavigation]);
+  }, [autoplay, time, cycleNavigation, goToNext, goToNextCycle]);
 
   return (
     <section className={classNameContainer} {...props}>
