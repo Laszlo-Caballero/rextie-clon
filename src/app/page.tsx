@@ -1,11 +1,11 @@
-import Header from "@/Sections/header";
-import InfoBank from "@/Sections/InfoBank";
-import InfoPrices from "@/Sections/InfoPrices";
-import ChangeFast from "@/Sections/ChangeFast";
-import DataInfo from "@/Sections/DataInfo";
-import ClientsRecomandations from "@/Sections/ClientsRecomandations";
-import VideoSection from "@/Sections/VideoSection";
-import Carousel from "@/Sections/Carousel";
+import Header from "@/sections/header";
+import InfoBank from "@/sections/InfoBank";
+import InfoPrices from "@/sections/InfoPrices";
+import ChangeFast from "@/sections/ChangeFast";
+import DataInfo from "@/sections/DataInfo";
+import ClientsRecomandations from "@/sections/ClientsRecomandations";
+import VideoSection from "@/sections/VideoSection";
+import Carousel from "@/sections/Carousel";
 
 export default function Home() {
   return (
