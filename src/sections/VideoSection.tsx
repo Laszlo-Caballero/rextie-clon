@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import LiteYoutubeEmbed from "react-lite-youtube-embed";
 import Forbes from "@/Images/forbes.jpg";
 import Gestion from "@/Images/gestion.png";
@@ -37,20 +37,23 @@ export default function VideoSection() {
     "“Rextie ha innovado el mercado Fintech peruano lanzando su aplicativo para relojes inteligentes o ‘smartwatches’, disponibles para Android y iOS, con el objetivo de que cada usuario pueda monitorear el tipo de cambio en cualquier momento del día”..",
   ];
 
-  const images: StaticImageData[] = [
-    Forbes,
-    Gestion,
-    Nasdaq,
-    FP,
-    comercio,
-    RS,
-    mk,
-    rpp,
-    bw,
-    se,
-    rep,
-    p21,
-  ];
+  const images = useMemo(
+    () => [
+      Forbes,
+      Gestion,
+      Nasdaq,
+      FP,
+      comercio,
+      RS,
+      mk,
+      rpp,
+      bw,
+      se,
+      rep,
+      p21,
+    ],
+    []
+  );
 
   const [renderImages, setRender] = useState<StaticImageData[]>(
     images.slice(0, 3)
@@ -64,7 +67,7 @@ export default function VideoSection() {
     if (currentText > 8 && currentText <= 11)
       return setRender(images.slice(9, 12));
     return setRender(images.slice(0, 3));
-  }, [currentText]);
+  }, [currentText, images]);
 
   return (
     <section className="h-2/3 flex flex-col justify-center items-center">
