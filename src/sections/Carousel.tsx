@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Slider, { Settings } from "react-slick";
 import iab from "@/Images/iabMIXX.png";
@@ -54,7 +53,7 @@ export default function Carousel() {
       {data.map((element, index) => {
         return (
           <div
-            className="h-10 w-2 flex items-center justify-center whitespace-nowrap text-center"
+            className="h-4 xl:h-10 flex items-center w-2 whitespace-nowrap text-center"
             key={index}
           >
             {typeof element == "string" ? (
@@ -65,7 +64,7 @@ export default function Carousel() {
               <Image
                 alt="img carousel"
                 src={element}
-                className="w-auto h-10 px-4"
+                className="w-auto h-10 xl:h-10 px-4"
               />
             )}
           </div>

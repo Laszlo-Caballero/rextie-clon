@@ -5,13 +5,16 @@ import apple from "@/Images/app-store.png";
 import google from "@/Images/google-play.png";
 import gallery from "@/Images/app-gallery.png";
 import Phones from "@/Images/apps-rextie.png";
+import { useWindowsSize } from "@/Hooks/useWindowsSize";
 
 export default function InfoApps() {
+  const windowSize = useWindowsSize();
+
   return (
     <section className="w-full flex justify-center mt-12">
-      <div className="flex bg-white-custom relative items-center w-7/12 px-24 py-8">
+      <div className="flex bg-white-custom relative items-center w-full mx-8 xl:w-7/12 px-4 xl:px-24 py-8 rounded-xl xl:rounded-none">
         <div className="flex flex-col gap-y-4">
-          <header className="flex text-gray-600 items-center gap-x-2">
+          <header className="flex justify-center xl:justify-normal text-gray-600 items-center gap-x-2">
             <Image alt="icon" src={logo} />
             <span className="flex flex-col">
               <span className="flex items-center font-bold">
@@ -22,7 +25,7 @@ export default function InfoApps() {
           </header>
 
           <div className="text-gray-600">
-            <h3 className="font-bold text-2xl text-black">
+            <h3 className="font-bold xl:text-2xl text-black">
               ¡Cambia dinero desde cualquier lugar!
             </h3>
             <div className="flex mt-4 gap-x-4">
@@ -32,8 +35,9 @@ export default function InfoApps() {
             </div>
           </div>
         </div>
-
-        <Image alt="phones" src={Phones} className="absolute right-24" />
+        {windowSize.width > 1280 && (
+          <Image alt="phones" src={Phones} className="absolute right-24" />
+        )}
       </div>
     </section>
   );

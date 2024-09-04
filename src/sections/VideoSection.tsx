@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import React, { useEffect, useMemo, useState } from "react";
 import LiteYoutubeEmbed from "react-lite-youtube-embed";
@@ -70,17 +69,17 @@ export default function VideoSection() {
   }, [currentText, images]);
 
   return (
-    <section className="h-2/3 flex flex-col justify-center items-center">
+    <section className="h-2/3 flex flex-col justify-center items-center mt-32 xl:mt-12">
       <h2 className="text-blue-dark font-bold text-2xl">
         Rextie en los medios
       </h2>
-      <p className="text-gray-custom-11 font-semibold">
+      <p className="text-gray-custom-11 font-semibold text-center text-xs px-12 xl:text-base">
         Encuentra artículos y noticias en medios que hablan de nuestra casa de
         cambio online.
       </p>
 
-      <div className="w-full flex justify-center mt-12">
-        <div className="w-1/3">
+      <div className="w-full flex flex-col xl:flex-row justify-center mt-12">
+        <div className="px-4 xl:w-1/3 mb-8 xl:mb-0">
           <LiteYoutubeEmbed id="j3s5nfNl12Q" title="Video notice Rextie" />
         </div>
 
@@ -99,7 +98,7 @@ export default function VideoSection() {
             ))}
           </div>
           <Carousel
-            heigth="100px"
+            heigth="340px"
             nextIcon={
               <span>
                 <Image alt="icon" src={right} />{" "}
@@ -122,7 +121,9 @@ export default function VideoSection() {
           >
             {News.map((element, i) => (
               <div key={i} className="px-20">
-                <p className="text-gray-custom-11 font-semibold">{element}</p>
+                <p className="text-gray-custom-11 font-semibold text-sm xl:text-base">
+                  {element}
+                </p>
                 <p className="text-blue-dark font-bold">Ver noticia</p>
               </div>
             ))}

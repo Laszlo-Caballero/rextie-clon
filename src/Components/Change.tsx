@@ -13,7 +13,7 @@ export default function Change() {
   const [selectChange, setSelectChange] = useState<string>("Venta");
 
   return (
-    <section className="lg:w-1/2 2xl:w-2/5 flex h-full flex-col">
+    <section className="lg:w-1/2 2xl:w-2/5 flex h-full flex-col mt-4 xl:mt-0">
       <div className="bg-gray-custom h-full rounded-2xl py-5">
         <span className="text-xs font-bold flex justify-center items-center">
           <Image alt="Trophy Icon" src={Trophy} />

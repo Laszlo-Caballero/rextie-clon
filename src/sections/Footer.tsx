@@ -7,8 +7,8 @@ import fb from "@/Icons/fb.svg";
 import yt from "@/Icons/yt.svg";
 import tk from "@/Icons/tiktok.svg";
 import ig from "@/Icons/ig.svg";
-import CardFooter from "@/Components/CardFooter";
 import book from "@/Images/book.png";
+import CardFooter from "@/Components/CardFooter";
 
 export default function Footer() {
   const Icons = [linkedin, fb, yt, tk, ig];

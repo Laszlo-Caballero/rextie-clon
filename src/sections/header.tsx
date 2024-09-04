@@ -5,9 +5,9 @@ import React from "react";
 
 export default function Header() {
   return (
-    <section className="bg-Banner bg-center bg-cover px-40 pt-4">
+    <section className="xl:bg-Banner bg-center bg-cover px-4 xl:px-40 pt-4 text-black xl:text-white">
       <Nav />
-      <article className="flex mt-36 justify-between">
+      <article className="flex flex-col xl:flex-row mt-12 xl:mt-36 justify-between">
         <Description />
         <Change />
       </article>

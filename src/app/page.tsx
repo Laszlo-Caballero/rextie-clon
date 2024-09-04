@@ -1,3 +1,4 @@
+"use client";
 import Header from "@/sections/header";
 import InfoBank from "@/sections/InfoBank";
 import InfoPrices from "@/sections/InfoPrices";
@@ -8,8 +9,11 @@ import VideoSection from "@/sections/VideoSection";
 import Carousel from "@/sections/Carousel";
 import InfoApps from "@/sections/InfoApps";
 import Footer from "@/sections/Footer";
+import FooterMobile from "@/sections/FooterMobile";
+import { useWindowsSize } from "@/Hooks/useWindowsSize";
 
 export default function Home() {
+  const windowSize = useWindowsSize();
   return (
     <main className="h-screen w-full text-white overflow-x-hidden">
       <Header />
@@ -30,9 +34,10 @@ export default function Home() {
 
       <InfoApps />
 
-      <Footer />
-      <div className="bg-blue-dark text-center p-2 font-bold">
-        <span className="w-full bg-blue-dark">
+      {windowSize.width > 1280 ? <Footer /> : <FooterMobile />}
+
+      <div className="bg-[#000096] xl:bg-blue-dark text-center p-2 font-bold">
+        <span className="w-full  xl:bg-blue-dark text-xs xl:text-base">
           {" "}
           ©2024 Rextie: La casa de cambio online, Líder del Perú. Todos los
           derechos reservados.

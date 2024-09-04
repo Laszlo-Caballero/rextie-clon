@@ -111,7 +111,7 @@ export const Carousel: FC<CarouselProps> = ({
         {onHover && (
           <div
             className={cn(
-              "z-[100] p-1 backdrop-blur-3xl bg-slate-400 rounded-lg ml-2 cursor-pointer",
+              "z-[100] p-1 backdrop-blur-3xl bg-slate-400 rounded-lg cursor-pointer",
               classNameIcons
             )}
             onClick={cycleNavigation ? goToPreviousCycle : goToPrevious}

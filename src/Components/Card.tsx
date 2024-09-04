@@ -13,7 +13,7 @@ interface Props {
 
 export default function Card({ title, Duration, icons, header }: Props) {
   return (
-    <div className="w-1/3">
+    <div className="w-full px-8 xl:px-0 xl:w-1/3">
       {header && (
         <header className="w-full text-center p-1 bg-gray-custom rounded-t-2xl">
           {header}
@@ -38,7 +38,7 @@ export default function Card({ title, Duration, icons, header }: Props) {
             })}
           </div>
 
-          <div className="flex justify-between w-full">
+          <div className="flex flex-wrap justify-center gap-y-4 gap-x-8 xl:gap-x-0 xl:justify-between w-full">
             {icons.map((icons, index) => {
               return <Image alt="Icon" src={icons} key={index} />;
             })}
