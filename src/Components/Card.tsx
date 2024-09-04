@@ -15,13 +15,13 @@ export default function Card({ title, Duration, icons, header }: Props) {
   return (
     <div className="w-1/3">
       {header && (
-        <header className="w-full text-center p-1 bg-[#000f49] rounded-t-2xl">
+        <header className="w-full text-center p-1 bg-gray-custom rounded-t-2xl">
           {header}
         </header>
       )}
       <div
         className={clsx(
-          "text-black w-full border p-12 border-[#cccfdb]",
+          "text-black w-full border p-12 border-gray-custom-2",
           header ? "rounded-b-2xl" : "rounded-2xl"
         )}
       >

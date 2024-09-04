@@ -10,7 +10,7 @@ interface Props {
 
 export default function Input({ Title, SrcImage, TypeMoney, Simbol }: Props) {
   return (
-    <div className="w-full mt-2 border-2 border-[#6666c1] p-4 rounded-xl">
+    <div className="w-full mt-2 border-2 border-gray-custom-5 p-4 rounded-xl">
       <p>{Title}</p>
       <div className="flex justify-between">
         <span className="flex items-center gap-x-2 font-bold text-xl">

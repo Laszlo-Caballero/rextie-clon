@@ -22,7 +22,9 @@ export default function Nav() {
 
             <span className="flex gap-x-8 items-center">
               <p>Iniciar sesión</p>
-              <p className="bg-[#0024b3] py-2 px-4 rounded-full">Registrate</p>
+              <p className="bg-blue-custom-2 py-2 px-4 rounded-full">
+                Registrate
+              </p>
             </span>
           </div>
         </li>

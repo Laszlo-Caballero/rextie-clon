@@ -71,7 +71,7 @@ export default function VideoSection() {
       <h2 className="text-blue-dark font-bold text-2xl">
         Rextie en los medios
       </h2>
-      <p className="text-[#44464b] font-semibold">
+      <p className="text-gray-custom-11 font-semibold">
         Encuentra artículos y noticias en medios que hablan de nuestra casa de
         cambio online.
       </p>
@@ -115,11 +115,11 @@ export default function VideoSection() {
             }}
             autoplay={false}
             cycleNavigation={false}
-            classNameIcons="p-3 rounded-full bg-[#eff2ff]"
+            classNameIcons="p-3 rounded-full bg-white-custom"
           >
             {News.map((element, i) => (
               <div key={i} className="px-20">
-                <p className="text-[#44464b] font-semibold">{element}</p>
+                <p className="text-gray-custom-11 font-semibold">{element}</p>
                 <p className="text-blue-dark font-bold">Ver noticia</p>
               </div>
             ))}

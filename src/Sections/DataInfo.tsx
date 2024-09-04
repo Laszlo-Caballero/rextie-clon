@@ -10,7 +10,7 @@ export default function DataInfo() {
         <h1 className="text-blue-dark text-3xl font-bold te">
           Somos la casa de cambio <br /> online líder del Perú
         </h1>
-        <p className="text-[#9d9ea1] text-sm mt-4 font-bold">
+        <p className="text-gray-custom-8 text-sm mt-4 font-bold">
           ¡Tenemos el más alto volumen de dólares cambiados! <br />
           Las personas consideran a Rextie como la casa de <br /> cambio online
           más confiable.

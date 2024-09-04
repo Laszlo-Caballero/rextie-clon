@@ -56,7 +56,7 @@ export default function ClientsRecomandations() {
         Descubre lo que dicen nuestros clientes
       </h2>
 
-      <p className="text-[#5b5d61] text-center mt-8">
+      <p className="text-gray-custom-6 text-center mt-8">
         Conoce de primera mano lo que es cambiar dinero con Rextie.
       </p>
 
@@ -64,7 +64,7 @@ export default function ClientsRecomandations() {
         {dataClient.map((client, index) => {
           return (
             <span
-              className="flex text-black flex-col items-center bg-[#eff2ff] justify-center px-8 py-4 border border-[#707e9b] rounded-xl"
+              className="flex text-black flex-col items-center bg-white-custom justify-center px-8 py-4 border border-gray-custom-7 rounded-xl"
               key={index}
             >
               <span className="text-center h-4/5">{client.experience}</span>

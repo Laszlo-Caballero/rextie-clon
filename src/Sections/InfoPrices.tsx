@@ -13,14 +13,14 @@ export default function InfoPrices() {
           Venta="S/3,7995"
           Img={<Image alt="icon" src={rx} />}
           bold
-          clasName="bg-[#0032ff] rounded-t-xl"
+          clasName="bg-blue-dark rounded-t-xl"
         />
 
         <CardDesc
           Compra="S/3,7530"
           Venta="S/3,7680"
           Img={<Image alt="icon" src={sunat} />}
-          clasName="bg-[#f7f8fb] text-black"
+          clasName="bg-gray-custom-9 text-black"
         />
 
         <CardDesc
@@ -31,24 +31,24 @@ export default function InfoPrices() {
               <Image alt="icon" src={bank} /> Bancos*
             </span>
           }
-          clasName="bg-[#f7f8fb] text-black rounded-b-xl"
+          clasName="bg-gray-custom-9 text-black rounded-b-xl"
         />
       </div>
 
-      <div className="text-[#0032ff]">
+      <div className="text-blue-dark">
         <span className="flex gap-x-2">
-          <span className="px-3.5 bg-[#00c8ff] rounded-full"></span>
+          <span className="px-3.5 bg-blue-custom-3 rounded-full"></span>
           <h2 className="font-bold text-xl">REXTIE BUSINESS</h2>
         </span>
         <h1 className="text-3xl font-bold mt-2">
           Tenemos un tipo de cambio <br /> exclusivo
         </h1>
-        <p className="text-sm text-[#7e7f82] mt-2">
+        <p className="text-sm text-gray-custom-10 mt-2">
           Cambia tus dólares a soles de forma segura, rápida y confiable con{" "}
           <br />
           nuestra casa de cambio online.
         </p>
-        <button className="text-white bg-[#0a3aff] px-4 py-2 rounded-md mt-2">
+        <button className="text-white bg-blue-custom-4 px-4 py-2 rounded-md mt-2">
           {" "}
           Conoce más
         </button>

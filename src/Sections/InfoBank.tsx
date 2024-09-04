@@ -13,7 +13,7 @@ import Image from "next/image";
 export default function InfoBank() {
   return (
     <section className="flex flex-col items-center justify-center mt-12 font-bold">
-      <h2 className="text-[#000f49] text-4xl">
+      <h2 className="text-gray-custom text-4xl">
         Cambia al instante con todos los bancos en Perú
       </h2>
 

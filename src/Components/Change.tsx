@@ -14,13 +14,13 @@ export default function Change() {
 
   return (
     <section className="lg:w-1/2 2xl:w-2/5 flex h-full flex-col">
-      <div className="bg-[#061757] h-full rounded-2xl py-5">
+      <div className="bg-gray-custom h-full rounded-2xl py-5">
         <span className="text-xs font-bold flex justify-center items-center">
           <Image alt="Trophy Icon" src={Trophy} />
           Cambía al Instate con todos los bancos en Perú
         </span>
-        <div className="h-full bg-white mx-4 rounded-2xl mt-2 py-4 px-4 text-[#636c90] flex items-center flex-col">
-          <div className="flex w-full py-1 px-2 gap-x-2 items-center mx-6 bg-[#e5e9f7] rounded-xl font-bold text-sm">
+        <div className="h-full bg-white mx-4 rounded-2xl mt-2 py-4 px-4 text-gray-custom-3 flex items-center flex-col">
+          <div className="flex w-full py-1 px-2 gap-x-2 items-center mx-6 bg-white-custom-2 rounded-xl font-bold text-sm">
             <span
               className={clsx(
                 "py-4 w-1/2 rounded-lg text-center hover:bg-white cursor-pointer",
@@ -56,7 +56,7 @@ export default function Change() {
           </div>
 
           <div className="flex flex-col items-center mt-4">
-            <p className="font-bold text-[#35aac3]">Usar un cupón o código</p>
+            <p className="font-bold text-blue-custom">Usar un cupón o código</p>
 
             <span className="w-full flex font-bold mt-8">
               Ahorro promedio*
@@ -64,12 +64,12 @@ export default function Change() {
               S/32.91
             </span>
           </div>
-          <button className="w-full py-4 bg-[#0024b3] rounded-xl text-white font-bold mt-4">
+          <button className="w-full py-4 bg-blue-custom-2 rounded-xl text-white font-bold mt-4">
             Ingresar a Rextie
           </button>
         </div>
       </div>
-      <p className="text-[#515b83] text-xs text-center mt-4 font-bold">
+      <p className="text-gray-custom-4 text-xs text-center mt-4 font-bold">
         (*)Cálculo respecto al tipo de cambio publicado por entidades bancarias.
       </p>
     </section>
