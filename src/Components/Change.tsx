@@ -13,13 +13,13 @@ export default function Change() {
   const [selectChange, setSelectChange] = useState<string>("Venta");
 
   return (
-    <section className="lg:w-1/2 2xl:w-2/5 flex h-full flex-col mt-4 xl:mt-0">
-      <div className="bg-gray-custom h-full rounded-2xl py-5">
+    <section className="lg:w-1/2 2xl:w-1/2 h-full flex flex-col mt-4 xl:mt-0 justify-center items-center">
+      <div className="bg-gray-custom w-[80%] rounded-2xl py-5 px-4">
         <span className="text-xs font-bold flex justify-center items-center">
           <Image alt="Trophy Icon" src={Trophy} />
           Cambía al Instate con todos los bancos en Perú
         </span>
-        <div className="h-full bg-white mx-4 rounded-2xl mt-2 py-4 px-4 text-gray-custom-3 flex items-center flex-col">
+        <div className=" bg-white w-full rounded-2xl mt-2 py-4 px-4 text-gray-custom-3 flex items-center flex-col">
           <div className="flex w-full py-1 px-2 gap-x-2 items-center mx-6 bg-white-custom-2 rounded-xl font-bold text-sm">
             <span
               className={clsx(
@@ -56,9 +56,11 @@ export default function Change() {
           </div>
 
           <div className="flex flex-col items-center mt-4">
-            <p className="font-bold text-blue-custom">Usar un cupón o código</p>
+            <p className="font-bold text-blue-custom text-xs">
+              Usar un cupón o código
+            </p>
 
-            <span className="w-full flex font-bold mt-8">
+            <span className="w-full flex font-bold mt-6">
               Ahorro promedio*
               <Image alt="Icon" src={PigIcon} />
               S/32.91
@@ -69,7 +71,7 @@ export default function Change() {
           </button>
         </div>
       </div>
-      <p className="text-gray-custom-4 text-xs text-center mt-4 font-bold">
+      <p className="text-gray-custom-4 text-[10px] text-center mt-4 font-bold">
         (*)Cálculo respecto al tipo de cambio publicado por entidades bancarias.
       </p>
     </section>

@@ -7,6 +7,7 @@ interface Props {
   Img: ReactElement;
   clasName?: string;
   bold?: boolean;
+  Buy?: boolean;
 }
 
 export default function CardDesc({
@@ -15,18 +16,21 @@ export default function CardDesc({
   Img,
   clasName,
   bold,
+  Buy,
 }: Props) {
   return (
-    <div className="w-full">
-      <div className={"flex items-center justify-between p-2 " + clasName}>
+    <div className="w-full border-b-2">
+      <div
+        className={"flex items-center justify-between px-2 py-2 " + clasName}
+      >
         {Img}
-        <div className="flex justify-between w-1/2">
-          <span className={clsx(bold && "font-bold")}>
-            <p className="font-normal">Compra</p>
+        <div className="flex gap-x-6">
+          <span className={clsx(bold && "font-bold", "text-xs")}>
+            {Buy && <p className="font-normal text-xs text-center">Compra</p>}
             {Compra}
           </span>
-          <span className={clsx(bold && "font-bold")}>
-            <p className="font-normal">Venta</p>
+          <span className={clsx(bold && "font-bold", "text-xs")}>
+            {Buy && <p className="font-normal text-xs text-center">Compra</p>}
             {Venta}
           </span>
         </div>

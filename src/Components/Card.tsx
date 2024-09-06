@@ -13,7 +13,7 @@ interface Props {
 
 export default function Card({ title, Duration, icons, header }: Props) {
   return (
-    <div className="w-full px-8 xl:px-0 xl:w-1/3">
+    <div className="w-full px-8 xl:px-0 xl:w-[30%]">
       {header && (
         <header className="w-full text-center p-1 bg-gray-custom rounded-t-2xl">
           {header}
@@ -21,18 +21,18 @@ export default function Card({ title, Duration, icons, header }: Props) {
       )}
       <div
         className={clsx(
-          "text-black w-full border p-12 border-gray-custom-2",
+          "text-black w-full border px-8 py-10 border-gray-custom-2",
           header ? "rounded-b-2xl" : "rounded-2xl"
         )}
       >
-        <div className="flex flex-col items-center gap-y-4">
-          <p>{title}</p>
+        <p className="font-normal text-xs text-center">{title}</p>
+        <div className="flex flex-col items-center gap-y-4 mt-2">
           <div className="flex justify-evenly w-full">
             {Duration.map((element, index) => {
               return (
-                <span className="text-center font-bold text-xl" key={index}>
+                <span className="text-center font-bold text-2xl" key={index}>
                   {element.Time}
-                  <p className="font-normal text-base">{element.subtitle}</p>
+                  <p className="font-normal text-xs">{element.subtitle}</p>
                 </span>
               );
             })}

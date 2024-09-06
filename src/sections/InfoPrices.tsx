@@ -8,7 +8,7 @@ import { useWindowsSize } from "@/Hooks/useWindowsSize";
 export default function InfoPrices() {
   const windowSize = useWindowsSize();
   return (
-    <section className="flex flex-col xl:flex-row xl:justify-center items-center w-full gap-x-12 mt-24 gap-y-8 px-8 xl:px-0">
+    <section className="flex flex-col xl:flex-row xl:justify-center items-center w-full gap-x-12 mt-32 gap-y-8 px-8 xl:px-0">
       {windowSize.width < 1280 && (
         <>
           {" "}
@@ -22,13 +22,14 @@ export default function InfoPrices() {
         </>
       )}
 
-      <div className="w-full xl:w-1/4">
+      <div className="w-full xl:w-[28%]">
         <CardDesc
           Compra="S/3,7655"
           Venta="S/3,7995"
-          Img={<Image alt="icon" src={rx} />}
+          Img={<Image alt="icon" src={rx} className="w-1/4" />}
           bold
           clasName="bg-blue-dark rounded-t-xl"
+          Buy
         />
 
         <CardDesc

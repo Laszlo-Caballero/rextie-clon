@@ -13,17 +13,11 @@ export default function Description() {
   return (
     <div className="flex flex-col gap-y-4 xl:w-1/2">
       <h1 className="font-bold text-3xl xl:text-5xl text-center xl:text-start">
-        La casa de cambio online{" "}
-        {windowSize.width > 1280 && (
-          <>
-            <br />
-          </>
-        )}{" "}
-        líder del Perú
+        La casa de cambio online líder del Perú
       </h1>
       <p className="text-center text-sm xl:text-start xl:text-base">
-        Celebramos un nuevo récord: 6 mil millones de dólares cambiados para
-        nuestros clientes
+        Celebramos un nuevo récord: 6 mil millones de dólares <br /> cambiados
+        para nuestros clientes
       </p>
       <div className="flex gap-x-12 mt-10 justify-center xl:justify-normal text-center">
         <span className="flex flex-col xl:flex-row items-center gap-x-4 gap-y-2">

@@ -12,12 +12,12 @@ import Image from "next/image";
 
 export default function InfoBank() {
   return (
-    <section className="flex flex-col items-center justify-center mt-12 font-bold">
-      <h2 className="text-gray-custom text-2xl text-center xl:text-4xl">
+    <section className="flex flex-col items-center justify-center mt-16 font-bold">
+      <h2 className="text-gray-custom text-2xl text-center xl:text-3xl">
         Cambia al instante con todos los bancos en Perú
       </h2>
 
-      <div className="w-full flex flex-col xl:flex-row items-center justify-center gap-x-4 mt-8 gap-y-4 xl:gap-y-0">
+      <div className="w-full flex flex-col xl:flex-row items-center justify-center gap-x-8 mt-8 gap-y-4 xl:gap-y-0">
         <Card
           title="Transferencias inmediatas"
           Duration={[{ Time: "15 min.", subtitle: "Todo el Perú" }]}
