@@ -13,7 +13,6 @@ import {
 import { cn } from "@/Types/cn";
 
 interface CarouselProps extends HTMLAttributes<HTMLDivElement> {
-  heigth: string;
   width?: string;
   previousIcon: ReactElement;
   nextIcon: ReactElement;
@@ -29,7 +28,6 @@ interface CarouselProps extends HTMLAttributes<HTMLDivElement> {
 
 export const Carousel: FC<CarouselProps> = ({
   children,
-  heigth,
   width,
   previousIcon,
   nextIcon,
@@ -92,13 +90,13 @@ export const Carousel: FC<CarouselProps> = ({
   }, [autoplay, time, cycleNavigation, goToNext, goToNextCycle]);
 
   return (
-    <section className={classNameContainer} {...props}>
+    <section className={cn("h-full", classNameContainer)} {...props}>
       <article
         className={cn(
-          `relative flex items-center justify-between select-none`,
+          `relative flex items-center justify-between select-none h-full`,
           className
         )}
-        style={{ height: heigth, width: width }}
+        style={{ width: width }}
         onMouseEnter={() => {
           setOnHover(true);
         }}
@@ -125,12 +123,8 @@ export const Carousel: FC<CarouselProps> = ({
             return cloneElement(
               child as ReactElement<HTMLAttributes<ReactNode>>,
               {
-                className: cn(
-                  "absolute w-auto px-12 mt-12",
-                  child.props.className
-                ),
+                className: cn("absolute w-auto px-12", child.props.className),
                 style: {
-                  height: heigth,
                   width: width,
                   zIndex: index === currentIndex ? 10 : 0,
                   opacity: index === currentIndex ? 1 : 0,

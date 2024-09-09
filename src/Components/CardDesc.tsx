@@ -8,6 +8,7 @@ interface Props {
   clasName?: string;
   bold?: boolean;
   Buy?: boolean;
+  border?: boolean;
 }
 
 export default function CardDesc({
@@ -17,9 +18,10 @@ export default function CardDesc({
   clasName,
   bold,
   Buy,
+  border,
 }: Props) {
   return (
-    <div className="w-full border-b-2">
+    <div className={clsx("w-full", border && "border-b-2")}>
       <div
         className={"flex items-center justify-between px-2 py-2 " + clasName}
       >

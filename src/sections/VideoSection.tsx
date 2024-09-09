@@ -69,22 +69,21 @@ export default function VideoSection() {
   }, [currentText, images]);
 
   return (
-    <section className="h-2/3 flex flex-col justify-center items-center mt-32 xl:mt-12">
-      <h2 className="text-blue-dark font-bold text-2xl">
+    <section className="h-full xl:h-1/2 flex flex-col justify-center items-center xl:mt-24">
+      <h2 className="text-blue-dark font-bold text-4xl text-center">
         Rextie en los medios
       </h2>
-      <p className="text-gray-custom-11 font-semibold text-center text-xs px-12 xl:text-base">
+      <p className="text-gray-custom-11 font-semibold text-center text-xs px-12 xl:text-base mt-8">
         Encuentra artículos y noticias en medios que hablan de nuestra casa de
         cambio online.
       </p>
-
-      <div className="w-full flex flex-col xl:flex-row justify-center mt-12">
+      <div className="w-full h-full flex flex-col xl:flex-row justify-center mt-4">
         <div className="px-4 xl:w-1/3 mb-8 xl:mb-0">
           <LiteYoutubeEmbed id="j3s5nfNl12Q" title="Video notice Rextie" />
         </div>
 
         <div className="h-full flex flex-col justify-center">
-          <div className="flex items-center justify-evenly w-full">
+          <div className="flex items-center justify-evenly w-full h-1/2">
             {renderImages.map((element, i) => (
               <Image
                 alt="Icon"
@@ -97,37 +96,38 @@ export default function VideoSection() {
               />
             ))}
           </div>
-          <Carousel
-            heigth="340px"
-            nextIcon={
-              <span>
-                <Image alt="icon" src={right} />{" "}
-              </span>
-            }
-            previousIcon={
-              <span>
-                <Image alt="icon" src={Left} />{" "}
-              </span>
-            }
-            indicators={false}
-            buttons={true}
-            className="text-black"
-            onChangeItem={(index) => {
-              setCurrentText(index);
-            }}
-            autoplay={false}
-            cycleNavigation={false}
-            classNameIcons="p-3 rounded-full bg-white-custom"
-          >
-            {News.map((element, i) => (
-              <div key={i} className="px-20">
-                <p className="text-gray-custom-11 font-semibold text-sm xl:text-base">
-                  {element}
-                </p>
-                <p className="text-blue-dark font-bold">Ver noticia</p>
-              </div>
-            ))}
-          </Carousel>
+          <div className="h-1/2">
+            <Carousel
+              nextIcon={
+                <span>
+                  <Image alt="icon" src={right} />{" "}
+                </span>
+              }
+              previousIcon={
+                <span>
+                  <Image alt="icon" src={Left} />{" "}
+                </span>
+              }
+              indicators={false}
+              buttons={true}
+              className="text-black"
+              onChangeItem={(index) => {
+                setCurrentText(index);
+              }}
+              autoplay={false}
+              cycleNavigation={false}
+              classNameIcons="p-3 rounded-full bg-white-custom"
+            >
+              {News.map((element, i) => (
+                <div key={i} className="px-20">
+                  <p className="text-gray-custom-11 font-semibold text-sm xl:text-sm">
+                    {element}
+                  </p>
+                  <p className="text-blue-dark font-bold">Ver noticia</p>
+                </div>
+              ))}
+            </Carousel>
+          </div>
         </div>
       </div>
     </section>

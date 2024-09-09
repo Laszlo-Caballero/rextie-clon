@@ -11,8 +11,8 @@ export default function InfoApps() {
   const windowSize = useWindowsSize();
 
   return (
-    <section className="w-full flex justify-center mt-12">
-      <div className="flex bg-white-custom relative items-center w-full mx-8 xl:w-7/12 px-4 xl:px-24 py-8 rounded-xl xl:rounded-none">
+    <section className="w-full flex justify-center mt-40">
+      <div className="flex bg-white-custom relative items-center w-full mx-8 xl:w-7/12 px-4 xl:px-24 py-12 rounded-xl xl:rounded-none">
         <div className="flex flex-col gap-y-4">
           <header className="flex justify-center xl:justify-normal text-gray-600 items-center gap-x-2">
             <Image alt="icon" src={logo} />
@@ -29,9 +29,15 @@ export default function InfoApps() {
               ¡Cambia dinero desde cualquier lugar!
             </h3>
             <div className="flex mt-4 gap-x-4">
-              <Image alt="store" src={apple} />
-              <Image alt="store" src={google} />
-              <Image alt="store" src={gallery} />
+              <a href="#">
+                <Image alt="store" src={apple} />
+              </a>
+              <a href="#">
+                <Image alt="store" src={google} />
+              </a>
+              <a href="#">
+                <Image alt="store" src={gallery} />
+              </a>
             </div>
           </div>
         </div>

@@ -36,8 +36,8 @@ export default function Home() {
 
       {windowSize.width > 1280 ? <Footer /> : <FooterMobile />}
 
-      <div className="bg-[#000096] xl:bg-blue-dark text-center p-2 font-bold">
-        <span className="w-full  xl:bg-blue-dark text-xs xl:text-base">
+      <div className="bg-[#000096] text-center p-2 font-bold">
+        <span className="w-full text-xs">
           {" "}
           ©2024 Rextie: La casa de cambio online, Líder del Perú. Todos los
           derechos reservados.

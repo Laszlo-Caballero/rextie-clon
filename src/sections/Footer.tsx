@@ -14,24 +14,23 @@ export default function Footer() {
   const Icons = [linkedin, fb, yt, tk, ig];
 
   return (
-    <footer className=" mt-24 mx-24 relative border-t-2 border-blue-dark">
+    <footer className=" mt-40 mx-24 relative border-t-2 border-blue-dark">
       <div className="relative w-full flex items-center">
         <div className="w-full h-[1px] bg-blue-dark"></div>
-        <button className="bg-blue-dark absolute right-1/2 p-3 rounded-full">
+        <button className="bg-blue-dark absolute right-1/2 translate-x-1/2 p-3 rounded-full">
           <Image alt="icon arrow" src={arrowUp} />
         </button>
       </div>
 
-      <div className="w-full flex text-sm justify-center mt-24 gap-x-12">
+      <div className="w-full flex text-sm justify-center mt-24 gap-x-20">
         <CardFooter
           title={
             <>
               {" "}
               <Image alt="logo" src={logoBlue} className="mb-4" />
-              Rextie S.A.C
             </>
           }
-          subtitles={["RUC 20601030013"]}
+          subtitles={[<>Rextie S.A.C</>, "RUC 20601030013"]}
           icons={Icons}
           bold
         />
@@ -42,8 +41,11 @@ export default function Footer() {
             "Rextie Business",
             "Rextie Factoring",
             "Confirming",
-            <span className="flex items-center" key={123012}>
-              Visa <p className="bg-orange-400 p-1 rounded-lg ml-1">Nuevo</p>
+            <span className="flex items-center text-xs" key={123012}>
+              Visa{" "}
+              <p className="bg-orange-400 p-1 rounded-md ml-1 text-white">
+                Nuevo
+              </p>
             </span>,
           ]}
         />
@@ -80,13 +82,13 @@ export default function Footer() {
             </h3>,
             "T. 01 700 3301",
             "C. 963 896 793",
-            <span key={1241241512}>
+            <span key={1241241512} className="text-xs">
               Lunes a Viernes: <br /> 8:00 am. - 8:00 pm.
             </span>,
-            <span key={1241241}>
+            <span key={1241241} className="text-xs">
               Sábados:, <br /> 9:00 am. - 3:00 pm.
             </span>,
-            <span key={124125125}>
+            <span key={124125125} className="text-xs">
               Av. José Gálvez <br />
               Barranechea 566, Of.101, <br />
               Urb. Corpac, San Isidro, Lima.

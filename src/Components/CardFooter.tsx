@@ -15,19 +15,23 @@ export default function CardFooter({ title, subtitles, icons, bold }: Props) {
     <div className="flex flex-col gap-y-10">
       <span className="text-gray-600">
         {typeof title == "string" ? (
-          <h3 className="font-bold text-lg">{title}</h3>
+          <h3 className="font-bold">{title}</h3>
         ) : (
           title
         )}
-        <div className="flex flex-col gap-y-4 mt-4">
+        <div className="flex flex-col gap-y-2 mt-8">
           {subtitles.map((element, i) => {
             if (typeof element == "string")
               return (
-                <h3 className={cn(bold && "font-bold")} key={i}>
+                <h3 className={cn(bold && "font-bold", "text-xs")} key={i}>
                   {element}
                 </h3>
               );
-            return <span key={i}>{element}</span>;
+            return (
+              <span key={i} className="text-sm">
+                {element}
+              </span>
+            );
           })}
         </div>
       </span>

@@ -8,14 +8,14 @@ import { useWindowsSize } from "@/Hooks/useWindowsSize";
 export default function DataInfo() {
   const windowSize = useWindowsSize();
   return (
-    <section className="flex flex-col xl:flex-row px-4 xl:px-12 justify-around mt-24">
-      <span>
-        <h1 className="text-blue-dark text-2xl font-bold text-center xl:text-start">
+    <section className="flex flex-col xl:flex-row xl:px-52 px-4 xl:py-16 justify-between">
+      <span className="flex flex-col justify-around">
+        <h1 className="text-blue-dark text-4xl font-bold text-center xl:text-start">
           Somos la casa de cambio {windowSize.width > 1280 && <br />} online
           líder del Perú
         </h1>
         {windowSize.width > 1280 && (
-          <p className="text-gray-custom-8 text-sm mt-4 font-bold">
+          <p className="text-gray-custom-11 text-sm">
             ¡Tenemos el más alto volumen de dólares cambiados! <br />
             Las personas consideran a Rextie como la casa de <br /> cambio
             online más confiable.
@@ -55,7 +55,7 @@ export default function DataInfo() {
           />
         </Slider>
       ) : (
-        <div className="flex w-2/5 justify-between">
+        <div className="flex w-1/2 justify-between">
           <CardInfo
             Icon={moneyChange}
             title="+6 mil millones"

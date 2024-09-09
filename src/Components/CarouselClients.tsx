@@ -11,10 +11,9 @@ interface Props {
 
 export default function CarouselClients({ dataClient }: Props) {
   return (
-    <div className="w-full flex justify-center px-12">
+    <div className="w-full h-2/3 flex justify-center px-12">
       <div className="h-full w-full flex flex-col justify-center">
         <Carousel
-          heigth="400px"
           nextIcon={
             <span>
               <Image alt="icon" src={right} />{" "}

@@ -21,30 +21,37 @@ export default function Nav() {
       </div>
       <ul className="flex justify-between items-center mt-6">
         <li>
-          <Image
-            alt="Logo icon"
-            src={windowSize.width < 1280 ? LogoM : LogoD}
-          />
+          <a href="#">
+            <Image
+              alt="Logo icon"
+              src={windowSize.width < 1280 ? LogoM : LogoD}
+            />
+          </a>
         </li>
         <li>
           <div className="flex items-center h-full gap-x-6 text-sm">
             {windowSize.width > 1280 && (
               <>
                 <span className="flex items-center h-full gap-x-6">
-                  <p>Nosotros</p>
-                  <p>Blog</p>
-                  <span className="flex gap-x-2 items-center">
+                  <a href="#">Nosotros</a>
+                  <a href="#">Blog</a>
+                  <a href="#" className="flex gap-x-2 items-center">
                     Servicios <Image alt="Arrow Icon" src={BottomIcon} />{" "}
-                  </span>
+                  </a>
                 </span>
               </>
             )}
             <span className="font-mono">|</span>{" "}
             <span className="flex gap-x-6 items-center">
-              <p className="font-bold">Iniciar sesión</p>
-              <p className="bg-blue-custom-2 py-2 px-4 rounded-full text-white font-bold">
+              <a href="#" className="font-bold">
+                Iniciar sesión
+              </a>
+              <a
+                href="#"
+                className="bg-blue-custom-2 py-2 px-4 rounded-full text-white font-bold"
+              >
                 Registrate
-              </p>
+              </a>
             </span>
           </div>
         </li>

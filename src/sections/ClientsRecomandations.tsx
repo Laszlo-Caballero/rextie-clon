@@ -49,24 +49,26 @@ export default function ClientsRecomandations() {
     },
   ];
   return (
-    <section className="w-full mt-16 h-2/3">
-      <h2 className="text-blue-dark text-2xl xl:text-4xl font-bold text-center px-12 ">
+    <section className="w-full mt-16 h-full">
+      <h2 className="text-blue-dark text-2xl xl:text-3xl font-bold text-center px-12 ">
         Descubre lo que dicen nuestros clientes
       </h2>
 
-      <p className="text-gray-custom-6 text-center mt-8 text-xs xl:text-base">
+      <p className="text-gray-custom-11 text-center mt-8 text-xs xl:text-sm">
         Conoce de primera mano lo que es cambiar dinero con Rextie.
       </p>
       {windowSize.width > 1280 ? (
-        <div className="flex h-3/4 justify-center gap-x-12 mt-4">
+        <div className="flex justify-center gap-x-4 mt-4">
           {dataClient.map((client, index) => {
             return (
               <span
-                className="flex text-black flex-col items-center bg-white-custom justify-center px-8 py-4 border border-gray-custom-7 rounded-xl"
+                className="flex text-black flex-col items-center bg-white-custom justify-around px-8 border border-gray-custom-7 rounded-xl"
                 key={index}
               >
-                <span className="text-center h-4/5">{client.experience}</span>
-                <h4 className="font-bold text-lg">{client.name}</h4>
+                <span className="text-center h-4/5 flex items-center py-20 px-2">
+                  {client.experience}
+                </span>
+                <h4 className="font-bold">{client.name}</h4>
               </span>
             );
           })}

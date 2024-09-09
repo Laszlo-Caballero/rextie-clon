@@ -15,7 +15,7 @@ export default function Card({ title, Duration, icons, header }: Props) {
   return (
     <div className="w-full px-8 xl:px-0 xl:w-[30%]">
       {header && (
-        <header className="w-full text-center p-1 bg-gray-custom rounded-t-2xl">
+        <header className="w-full text-center p-1 bg-gray-custom rounded-t-2xl font-normal">
           {header}
         </header>
       )}
